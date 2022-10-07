@@ -1,3 +1,11 @@
 # Rond.ir Crawler
 
-A crawler for extracting a List of top sim cards and tel numbers from the Rond.ir website. (PHP)
+A crawler for extracting a List of top sim cards and tel numbers from the https://rond.ir website. (PHP)
+
+## Using
+
+```
+$ php parser.php > output.txt
+```
+
+© Copyright Max Base 2022
