@@ -1,9 +1,19 @@
 <?php
+/*
+ * Name: Round Ir Crawler
+ * Date: 2022/10/07
+ * Author: Max Base
+ * Repository: https://github.com/basemax/RoundIrCrawler
+ */
+
+@mkdir("cache/");
+
 function parsePage(int $page) {
     $link = "https://www.rond.ir/SearchSimSale?page=" . $page;
     $data = file_get_contents($link);
     // $data = file_get_contents("cache-page1.html");
     // print $data;
+    file_put_contents("cache/cache-page$page.html", $data);
 
     $pattern = '/<tr class=(evendTr|odTr)>(.*?)<\/tr>/si';
     preg_match_all($pattern, $data, $matches);
